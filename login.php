@@ -16,6 +16,7 @@ if (isset($_POST['submit'])) {
     if ($user_matched > 0) {
         $_SESSION['password'] = $password;
        
+       
         header("location:select.php");
     } else {
         echo "not matched !!!!";

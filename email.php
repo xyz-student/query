@@ -25,7 +25,7 @@
 <?php
 // email
 if(isset($_POST['submit'])){
-    $to ="sithub@gmail.com";
+    $to ="sithub@gmail.com"; //sender
     $subject = $_POST['subject'];
     $message = $_POST['message'];
     $from = $_POST['email'];

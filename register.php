@@ -2,13 +2,10 @@
 
     //  s n 2
 
-
     include "db.php";
-
     if (isset($_POST['submit'])) {
         $name = $_POST['name'];
         $password = $_POST['password'];
-
 
         $sql = "SELECT  name from smriti_table  WHERE 
          name='$name' and password='$password' ";
@@ -29,7 +26,6 @@
         }
     }
     ?>
-
 
 
  <!DOCTYPE html>

@@ -13,7 +13,7 @@
 
 <body>
     <h1>welcome for our login page</h1>
-    <a href="login.php">login here</a> || <a href="register.php"> register here</a>
+    <a href="login.php">login here</a> || <a href="register.php"> register here</a> ||
  
     <a href="logout.php"  >logout here </a>
 </body>

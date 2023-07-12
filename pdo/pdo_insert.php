@@ -1,7 +1,7 @@
 <?php
 require_once("pdo_db.php");
 
-$stmt = $conn->prepare("INSERT INTO user (`name`,`email`,`password`) VALUES ('subham', 'subham@gmail.com', 'subham@123')");
+$stmt = $conn->prepare("INSERT INTO user (`name`,`email`,`password`) VALUES ('kishore', 'abc@gmail.com', 'kishore')");
 $stmt->execute();
 
 // if($stmt){

@@ -43,6 +43,12 @@ if (isset($_POST['submit'])) {
 </head>
 
 <body>
+
+
+
+
+
+
     <form action="" method="post" enctype="multipart/form-data">
         name : <input type="text" name="name"> <br>
         image : <input type="file" name="image"> <br>
