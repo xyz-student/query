@@ -30,14 +30,15 @@ class TableRows extends RecursiveIteratorIterator {
 
   // set the resulting array to associative
   $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
-  foreach(new TableRows(new RecursiveArrayIterator($stmt->fetchAll())) as $k=>$v) {
+  foreach(new TableRows(new RecursiveArrayIterator($stmt->fetchAll())) as $k=>$
+  v) {
     echo $v    ;
   }
 
 echo "</table>";
 ?>
 
-<a href="pdo_insert.php">Inset</a>
-<a href="./pdo_delete.php">Delete</a>
-<a href="./pdo_multiinsert.php">Multi Insert</a>
-<a href="./pdo_update.php">Update</a>
+  <a href="pdo_insert.php">Inset</a>
+  <a href="./pdo_delete.php">Delete</a>
+  <a href="./pdo_multiinsert.php">Multi Insert</a>
+  <a href="./pdo_update.php">Update</a>

@@ -3,7 +3,7 @@
 
 require("pdo_db.php");
 
-$stmt = $conn->prepare("DELETE FROM user WHERE id=4");
+$stmt = $conn->prepare("DELETE FROM user WHERE id=6");
 $stmt->execute();
 
 

@@ -6,9 +6,11 @@
     if (isset($_POST['submit'])) {
         $name = $_POST['name'];
         $password = $_POST['password'];
+        $bla = $_POST['bla'];
 
-        $sql = "SELECT  name from smriti_table  WHERE 
-         name='$name' and password='$password' ";
+        $sql = "SELECT  * from smriti_table  WHERE 
+         name='$name' and password='$password'and 
+         bla = '$bla' ";
 
         $emailresult = mysqli_query($con, $sql);
 
@@ -17,8 +19,8 @@
             echo "you have already registered !!";
         } else {
             $insrt = mysqli_query($con, "INSERT INTO 
-            `smriti_table`(`name`, `password`) VALUES
-             ('$name','$password')");
+            `smriti_table`(`name`, `password`,`bla`) VALUES
+             ('$name','$password','$bla')");
 
             if ($insrt) {
                 header("location:login.php");
@@ -46,6 +48,7 @@
 
          <label for=""> password</label>
          <input type="password" class="form-control" name="password">
+         <input type="text" class="form-control" name="bla">
 
          <input type="submit" name="submit">
      </form>
