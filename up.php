@@ -13,18 +13,12 @@ while ($row = mysqli_fetch_array($query)) {
 
 ?>
 <?php
-
 //  update
 $con = mysqli_connect("localhost", "root", "", "smriti");
 if (isset($_POST['submit'])) {
-
     $id = $_GET['id'];
-
     $gander = $_POST['gander'];
     $message = $_POST['message'];
-
-
-
 
     $sql1 = "UPDATE `rad` SET `gander`='$gander',`message`='$message' WHERE `id`='$id'";
     $query1 = mysqli_query($con, $sql1) ;

@@ -13,12 +13,12 @@ if (isset($_POST['submit'])) {
 
     $result = mysqli_query($con, "select * 
      from smriti_table WHERE name='$name' and password='$password'and bla='$bla'");
-     $fetch = mysqli_fetch_array($result);
+   
      $user_matched = mysqli_num_rows($result);
   
     if ($user_matched > 0) {
         $_SESSION['password'] = $password;
-        $_SESSION['id']=$fetch['id'];
+        // $_SESSION['id']=$fetch['id'];
         
         
               

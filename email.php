@@ -19,9 +19,7 @@
     </form>
     
 </body>
-
 </html>
-
 <?php
 // email
 if(isset($_POST['submit'])){

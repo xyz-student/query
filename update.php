@@ -63,7 +63,7 @@
  <body>
      <form action="" method="post" enctype="multipart/form-data">
          name : <input type="text" value="<?php echo $name ?>" name="name"> <br>
-         password : <input type="password" value="<?php echo $password ?>" name="password"> <br>
+         password : <input type="text" value="<?php echo $password ?>" name="password"> <br>
          image : <input type="file" value="<?php echo $image ?>" name="image"> <br>
          <input type="submit" name="submit">
 

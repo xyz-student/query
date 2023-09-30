@@ -1,4 +1,17 @@
- 
+<?php
+// session_start();
+
+// if (!isset($_SESSION["id"])) {
+//     header("Location:index.php");
+// }
+
+?>
+<?php
+
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,11 +26,11 @@
 <body>
   
     <?php
-    // include "db.php";
-    // $select = "SELECT * from `smriti_table`  ";
-    // $qu = mysqli_query($con, $select);
-    // $fetch = mysqli_fetch_array($qu);    
-    // echo "<h2 class='text-success'>". "Welcome ". $fetch['name'] . "</h2>";
+    include "db.php";
+    $select = "SELECT * from `smriti_table` WHERE `id`='$_SESSION[id]'";
+    $qu = mysqli_query($con, $select);
+    $fetch = mysqli_fetch_array($qu);    
+    echo "<h2 class='text-success'>". "Welcome ". $fetch['name'] . "</h2>";
   
   
     ?>
@@ -26,7 +39,9 @@
             <td>s no</td>
             <td>image</td>
             <td>name</td>
-            <td>password</td>            
+            <td>password</td>
+            <td>update</td>
+            <td>delete</td>
         </tr>
         <?php
         include "db.php";
@@ -38,9 +53,14 @@
         ?>
             <tr>
                 <td><?php echo $s_no ?></td>
-                <td><img src="<?php echo $row['image'] ?>" height="100px" width="100px" alt=""></td>
+                <td><a href="single_page.php?id=<?php echo $row['id'];  ?>"><img src="<?php echo $row['image'] ?>" height="100px" width="100px" alt=""></a></td>
                 <td><?php echo $row['name'] ?></td>
-                <td><?php echo $row['password'] ?></td>               
+                <td><?php echo $row['password'] ?></td>
+                <td><a href="update.php?id=<?php echo $row['id'];  ?>">
+                        update</a></td>
+                <td><a href="delete.php?id=<?php echo $row['id'];  ?>">
+                        delete</a></td>
+
             </tr>
         <?php $s_no++;
         } ?>

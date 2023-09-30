@@ -95,6 +95,9 @@
     <h2>Registration Form</h2>
     <span class="error">* required field </span>
     <br><br>
+    <!-- PHP_SELF : call the function same page -->
+    <!-- _SERVER : super global var -->
+    
     <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
         Name:
         <input type="text" name="name">

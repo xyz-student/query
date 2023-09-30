@@ -13,12 +13,8 @@ if (isset($_POST['submit'])) {
 
     if ($query) {
         header("location:gander.php");
-    }
-}
-
-
+    }}
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,8 +23,7 @@ if (isset($_POST['submit'])) {
     <title>Document</title>
 </head>
 <body>
-    
-<form action="" method="post">
+    <form action="" method="post">
     <div class="form-select">
       <textarea name="message" id="" cols="30" rows="10"></textarea>
         <label for=""> Gander</label>
@@ -36,7 +31,6 @@ if (isset($_POST['submit'])) {
         <input type="radio" value="Female" name="gander">
         <input type="submit" name="submit">
     </div>
-
 </form>
 </body>
 </html>

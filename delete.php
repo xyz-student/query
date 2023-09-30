@@ -6,5 +6,5 @@ $del = "DELETE FROM `smriti_table` WHERE `id`='$id'";
 $query = mysqli_query($con, $del);
 
 if ($query) {
-    header("location:select.php");
+    header("location:sel.php");
 }
